@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <cstdlib>//libreria para limpiar pantalla
 // Variables globales
-int A; // Variable que selecciona y define qué usuario ingresa
+int A; // Variable que selecciona y define quÃ© usuario ingresa
 int C;
-int OpcionCajero; // Variable para seleccionar la opción del cajero
-int terminarOp; // Variable que determina si el usuario desea realizar otra operación
+int OpcionCajero; // Variable para seleccionar la opciÃ³n del cajero
+int terminarOp; // Variable que determina si el usuario desea realizar otra operaciÃ³n
 float MontoInicial1 = 10000.00; // Monto inicial del usuario 1 "Leonardo Mondragon Fernandez"
 float MontoInicial2 = 5000.00; // Monto inicial del usuario 2 "Pedro Infante Cruz"
 int Retirar; // Cantidad a retirar
@@ -17,21 +17,21 @@ int NIPDOS = 5678; // NIP del usuario 2
 int ChangeUsuario = 0;
 int Pay;
 int TerminarTODO;
-// Generador de números pseudoaleatorios (LCG)
+// Generador de nÃºmeros pseudoaleatorios (LCG)
 unsigned long semilla = 2; // Semilla inicial
 
-// Función para establecer la semilla
+// FunciÃ³n para establecer la semilla
 void setSemilla(unsigned long nuevaSemilla) {
 	semilla = nuevaSemilla;
 }
-// Función para generar el siguiente número aleatorio
+// FunciÃ³n para generar el siguiente nÃºmero aleatorio
 unsigned long myRand() {
 	semilla = (1103515245 * semilla + 12345) % 2147483648;
 	return semilla;
 }
 int NipErroneo=0;
 int ExitVali=0;
-// Función para validar el NIP del usuario
+// FunciÃ³n para validar el NIP del usuario
 void validarNIP(int nipEsperado, int A, char Usuario1or2[]) {
 	int nipIngresado;
 	do {
@@ -52,7 +52,7 @@ void validarNIP(int nipEsperado, int A, char Usuario1or2[]) {
 		}
 	} while (nipIngresado != nipEsperado && ExitVali!=1 ); // Repetir hasta que el NIP sea correcto
 	if (ExitVali==1){
-		printf("Gracias por usar el cajero automático. Lamentamos los inconvenientes ¡Hasta luego!\n");
+		printf("Gracias por usar el cajero automÃ¡tico. Lamentamos los inconvenientes Â¡Hasta luego!\n");
 		terminarOp=2;
 		ChangeUsuario=2;
 	}
@@ -76,7 +76,7 @@ void DeseaHacer() {
 		scanf("%d", &terminarOp);
 		if (terminarOp == 2) {
 			ChangeUsuario=2;
-			printf("\n Gracias por usar el cajero automático. ¡Hasta luego!\n");
+			printf("\n Gracias por usar el cajero automÃ¡tico. Â¡Hasta luego!\n");
 		}
 		if (terminarOp!=2 && terminarOp!= 1){
 			system("cls");
@@ -312,7 +312,7 @@ if (ExitVali!=1){
 									validarLuzPaid1=1;
 									MontoInicial1 -= Pagar;
 									DecoraSimple();
-									printf("Pago realizado con éxito. Su nuevo saldo es: %.2f\n", MontoInicial1);
+									printf("Pago realizado con Ã©xito. Su nuevo saldo es: %.2f\n", MontoInicial1);
 									DecoraDoble();
 								}
 							} else if (A == 2) {
@@ -326,7 +326,7 @@ if (ExitVali!=1){
 									validarLuzPaid2=1;
 									MontoInicial2 -= Pagar;
 									DecoraSimple();
-									printf("Pago realizado con éxito. Su nuevo saldo es: %.2f\n", MontoInicial2);
+									printf("Pago realizado con Ã©xito. Su nuevo saldo es: %.2f\n", MontoInicial2);
 									DecoraDoble();
 								}
 							}
@@ -374,7 +374,7 @@ if (ExitVali!=1){
 									validarAguaPaid1=1;
 									MontoInicial1 -= Pagar;
 									DecoraSimple();
-									printf("Pago realizado con éxito. Su nuevo saldo es: %.2f\n", MontoInicial1);
+									printf("Pago realizado con Ã©xito. Su nuevo saldo es: %.2f\n", MontoInicial1);
 									DecoraDoble();
 								}
 							} else if (A == 2) {
@@ -388,7 +388,7 @@ if (ExitVali!=1){
 									validarAguaPaid2=1;
 									MontoInicial2 -= Pagar;
 									DecoraSimple();
-									printf("Pago realizado con éxito. Su nuevo saldo es: %.2f\n", MontoInicial2);
+									printf("Pago realizado con Ã©xito. Su nuevo saldo es: %.2f\n", MontoInicial2);
 									DecoraDoble();
 								}
 							}
@@ -435,7 +435,7 @@ if (ExitVali!=1){
 									validarInternetPaid1=1;
 									MontoInicial1 -= Pagar;
 									DecoraSimple();
-									printf("Pago realizado con éxito. Su nuevo saldo es: %.2f\n", MontoInicial1);
+									printf("Pago realizado con Ã©xito. Su nuevo saldo es: %.2f\n", MontoInicial1);
 									DecoraDoble();
 								}
 							} else if (A == 2) {
@@ -449,7 +449,7 @@ if (ExitVali!=1){
 									validarInternetPaid2=1;
 									MontoInicial2 -= Pagar;
 									DecoraSimple();
-									printf("Pago realizado con éxito. Su nuevo saldo es: %.2f\n", MontoInicial2);
+									printf("Pago realizado con Ã©xito. Su nuevo saldo es: %.2f\n", MontoInicial2);
 									DecoraDoble();
 								}
 							}
@@ -474,7 +474,7 @@ if (ExitVali!=1){
 					break;
 				default:
 					if (C!=1 && C!= 2 && C!=3 && C!=4 && C!=5 && C!=6){
-						printf("Opción no válida. Cancelando operación.\n");
+						printf("OpciÃ³n no vÃ¡lida. Cancelando operaciÃ³n.\n");
 						printf("(pulse 1 )");
 						printf("para continuar\n\n");
 						scanf("%d",&terminarOp);
@@ -493,7 +493,7 @@ if (ExitVali!=1){
 					DecoraSimple();
 					system("cls");
 					printf("-%s", Usuario11);
-					printf("\nDepósito exitoso.\n");
+					printf("\nDepÃ³sito exitoso.\n");
 					printf("Su nuevo saldo es: %.2f\n", MontoInicial1);
 					DecoraDoble();
 				} else if (A == 2) {
@@ -501,7 +501,7 @@ if (ExitVali!=1){
 					DecoraSimple();
 					system("cls");
 					printf("-%s", Usuario22);
-					printf("\nDepósito exitoso.\n");
+					printf("\nDepÃ³sito exitoso.\n");
 					printf("Su nuevo saldo es: %.2f\n", MontoInicial2);
 					DecoraDoble();
 				}
@@ -520,17 +520,17 @@ if (ExitVali!=1){
 				break;
 			case 6:
 				system("cls");
-				printf("Gracias por usar el cajero automático. ¡Hasta luego!\n");
+				printf("Gracias por usar el cajero automÃ¡tico. Â¡Hasta luego!\n");
 				terminarOp=2;
 				ChangeUsuario=2;
 				break;
-			default: // Opción no válida
-				printf("Opción no válida. Por favor, intente nuevamente.\n");
+			default: // OpciÃ³n no vÃ¡lida
+				printf("OpciÃ³n no vÃ¡lida. Por favor, intente nuevamente.\n");
 				printf("(pulse 1 )");
 				printf("para continuar\n\n");
 				scanf("%d",&terminarOp);
 			}
-		} while (OpcionCajero != 6 && terminarOp != 2); // El ciclo se detendrá cuando el usuario elija salir (opción 5)
+		} while (OpcionCajero != 6 && terminarOp != 2); // El ciclo se detendrÃ¡ cuando el usuario elija salir (opciÃ³n 5)
 	}
 	} while(ChangeUsuario!=2 && TerminarTODO!=1);
 	return 0;
